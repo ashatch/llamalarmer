@@ -1,14 +1,15 @@
 import "phaser";
 
 export default class Player {
-  scene: Phaser.Scene;
+  sprite: Phaser.GameObjects.Sprite;
   
-  constructor(scene: Phaser.Scene, x, y) {
-    this.scene = scene;
+  constructor(scene: Phaser.Scene, x: number, y: number) {
+    this.sprite = scene.add.sprite(x, y, 'player');
+    this.sprite.setScale(2,2);
   }
 
   update() {
-
+    
   }
 
   destroy() {

@@ -1,9 +1,12 @@
+import "phaser";
+
 import Player from "./player";
 
 export default class MainScene extends Phaser.Scene {
   player: Player;
 
   preload() {
+    this.load.image('player', '../assets/llama-001.png');
   }
 
   create() {
@@ -20,5 +23,6 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update(time: number, delta: number) {
+    this.player.update();
   }
 }
