@@ -19,6 +19,7 @@ export default class MainScene extends Phaser.Scene {
         spacing: 0
       }
     );
+    this.load.audio('soundtrack', '../assets/llamalarmer.mp3');
   }
 
   create() {
@@ -33,6 +34,8 @@ export default class MainScene extends Phaser.Scene {
         backgroundColor: "#ffffff"
       })
       .setScrollFactor(0);
+
+    this.sound.play('soundtrack');
   }
 
   update(time: number, delta: number) {
